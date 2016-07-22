@@ -15,6 +15,22 @@ $(function () {
             $("#tiles").append($tileRow);
         }
     }
+    
+    function shuffle() {
+      
+    }
+
+    function assignPokemonToTiles() {
+    }
+    
+    function checkMatch() {
+    }
+    
+    function onClickTile() {
+    }
+    
+    function reset() {
+    }
 
     $("#tiles").empty();
 
