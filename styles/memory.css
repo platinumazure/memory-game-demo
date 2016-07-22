@@ -1,5 +1,6 @@
 body {
     font-family: Arial, sans-serif;
+    background-color: rgb(0, 255, 62);
 }
 
 #tiles {
@@ -10,8 +11,46 @@ body {
     height: 150px;
     width: 150px;
     margin: 3px;
-    
+
     background-color: gray;
-    
+
     display: inline-block;
+
+    background-size: 150px 150px;
+}
+
+.tile.revealed {
+    background-color: white;
+}
+
+.revealed.blastoise {
+    background-image: url(http://imgur.com/download/39wkEWB);
+}
+
+.revealed.charizard {
+    background-image: url(http://imgur.com/download/4JD0vki);
+}
+
+.revealed.dragonite {
+    background-image: url(http://imgur.com/download/HYuaeqK);
+}
+
+.revealed.gengar {
+    background-image: url(http://imgur.com/download/qCCn6I6);
+}
+
+.revealed.magikarp {
+    background-image: url(http://imgur.com/download/sG1SbeP);
+}
+
+.revealed.mew {
+    background-image: url(http://imgur.com/download/56wKpXE);
+}
+
+.revealed.pikachu {
+    background-image: url(http://imgur.com/download/cWxChUD);
+}
+
+.revealed.venusaur {
+    background-image: url(http://imgur.com/download/A4a0l5M);
 }
