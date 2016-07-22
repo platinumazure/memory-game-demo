@@ -2,6 +2,17 @@
 
 $(function () {
     const gridSize = 4;
+    
+    const pokemonNames = [
+        "blastoise", "blastoise",
+        "charizard", "charizard",
+        "dragonite", "dragonite",
+        "gengar", "gengar",
+        "magikarp", "magikarp",
+        "mew", "mew",
+        "pikachu", "pikachu",
+        "venusaur", "venusaur"
+    ];
 
     function renderTiles() {
         let index = 0;
