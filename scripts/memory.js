@@ -88,6 +88,10 @@ $(function () {
             // Increase the move counter.
             movesTaken += 1;
             $("#moves-taken").text(movesTaken);
+
+            // Reset the first and second clicked tile.
+            firstClickedTile = null;
+            secondClickedTile = null;
         }
     }
     
