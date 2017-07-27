@@ -19,6 +19,8 @@ $(function () {
     let firstClickedTile = null;
     let secondClickedTile = null;
 
+    let movesTaken = 0;
+
     function renderTiles() {
         let index = 0;
         
@@ -82,6 +84,10 @@ $(function () {
             firstClickedTile = pokemon;
         } else {
             secondClickedTile = pokemon;
+
+            // Increase the move counter.
+            movesTaken += 1;
+            $("#moves-taken").text(movesTaken);
         }
     }
     
