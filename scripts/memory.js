@@ -20,6 +20,7 @@ $(function () {
     let secondClickedTile = null;
 
     let movesTaken = 0;
+    let pairsFound = 0;
 
     function renderTiles() {
         let index = 0;
@@ -72,6 +73,7 @@ $(function () {
     }
     
     function checkMatch() {
+        return firstClickedTile === secondClickedTile;
     }
     
     function onClickTile() {
@@ -84,6 +86,12 @@ $(function () {
             firstClickedTile = pokemon;
         } else {
             secondClickedTile = pokemon;
+
+            // Check for a match, then update game state accordingly.
+            if (checkMatch()) {
+                pairsFound += 1;
+                $("#pairs-found").text(pairsFound);
+            }
 
             // Increase the move counter.
             movesTaken += 1;
