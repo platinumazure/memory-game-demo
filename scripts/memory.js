@@ -16,6 +16,9 @@ $(function () {
 
     const pokemonTiles = pokemonNames.slice();
 
+    let firstClickedTile = null;
+    let secondClickedTile = null;
+
     function renderTiles() {
         let index = 0;
         
@@ -74,6 +77,12 @@ $(function () {
 
         $(this).addClass(pokemon);
         $(this).addClass("revealed");
+
+        if (!firstClickedTile) {
+            firstClickedTile = pokemon;
+        } else {
+            secondClickedTile = pokemon;
+        }
     }
     
     function reset() {
