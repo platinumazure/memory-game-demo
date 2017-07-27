@@ -14,6 +14,8 @@ $(function () {
         "venusaur", "venusaur"
     ];
 
+    const pokemonTiles = pokemonNames.slice();
+
     function renderTiles() {
         let index = 0;
         
@@ -23,7 +25,7 @@ $(function () {
             for (let column = 0; column < gridSize; column += 1) {
                 const $tile = $("<div class='tile'></div>");
                 
-                $tile.data("tileIndex", index);
+                $tile.attr("data-index", index);
                 index += 1;
                 
                 $tileRow.append($tile);
@@ -31,6 +33,8 @@ $(function () {
 
             $("#tiles").append($tileRow);
         }
+
+        assignPokemonToTiles();
     }
     
     function shuffle(array) {
@@ -54,6 +58,12 @@ $(function () {
     }
 
     function assignPokemonToTiles() {
+        shuffle(pokemonTiles);
+
+        for (let i = 0; i < pokemonTiles.length; ++i) {
+            const $tile = $(`[data-index=${i}]`);
+            $tile.data("pokemon", pokemonTiles[i]);
+        }
     }
     
     function checkMatch() {
