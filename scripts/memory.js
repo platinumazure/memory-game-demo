@@ -70,6 +70,10 @@ $(function () {
     }
     
     function onClickTile() {
+        const pokemon = $(this).data("pokemon");
+
+        $(this).addClass(pokemon);
+        $(this).addClass("revealed");
     }
     
     function reset() {
@@ -78,4 +82,6 @@ $(function () {
     $("#tiles").empty();
 
     renderTiles();
+
+    $(".tile").on("click", onClickTile);
 });
